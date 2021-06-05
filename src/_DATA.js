@@ -2,7 +2,8 @@ let users = {
 	sarahedo: {
 		id: 'sarahedo',
 		name: 'Sarah Edo',
-		avatarURL: '',
+		avatarURL:
+			'https://icons-for-free.com/iconfiles/png/512/avatar+person+profile+user+icon-1320086059654790795.png',
 		answers: {
 			'8xf0y6ziyjabvozdd253nd': 'optionOne',
 			'6ni6ok3ym7mf1p33lnez': 'optionTwo',
@@ -14,7 +15,8 @@ let users = {
 	tylermcginnis: {
 		id: 'tylermcginnis',
 		name: 'Tyler McGinnis',
-		avatarURL: '',
+		avatarURL:
+			'https://pbs.twimg.com/profile_images/1274852397693595649/tchdGtaK_400x400.jpg',
 		answers: {
 			vthrdm985a262al8qx3do: 'optionOne',
 			xj352vofupe1dqz9emx13r: 'optionTwo',
@@ -24,7 +26,8 @@ let users = {
 	johndoe: {
 		id: 'johndoe',
 		name: 'John Doe',
-		avatarURL: '',
+		avatarURL:
+			'https://thumbs.dreamstime.com/b/unknown-person-icon-anonymous-pictogram-isolated-white-background-vector-sign-illustration-146954608.jpg',
 		answers: {
 			xj352vofupe1dqz9emx13r: 'optionOne',
 			vthrdm985a262al8qx3do: 'optionTwo',

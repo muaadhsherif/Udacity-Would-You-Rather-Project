@@ -1,0 +1,39 @@
+.container {
+	display: flex;
+	background-color: #0e1929;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.user {
+	height: 300px;
+	width: 200px;
+	margin: 30px;
+	border: solid #ccc;
+	background-color: #f1f1f1;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+img.user_avatar {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	border: double #ccc;
+	display: block;
+	margin: 30px auto;
+}
+
+.user button {
+	padding: 10px;
+	font-size: 15px;
+	font-weight: bold;
+	background-color: #0e1929;
+	color: #f1f1f1;
+	transition: 0.5s;
+}
+
+.user button:hover {
+	background-color: #f1f1f1;
+	color: #0e1929;
+}

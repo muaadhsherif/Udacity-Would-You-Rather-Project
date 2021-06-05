@@ -1,16 +1,27 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { _getUsers } from '../_DATA'
+import '../styles/intro.css'
 
 class Intro extends Component {
 	render() {
-		const users = this.props.users ? (
-			<div>test</div>
+		const usersUI = this.props.users ? (
+			Object.entries(this.props.users).map(([key, val]) => (
+				<div className='user' key={key}>
+					<img
+						className='user_avatar'
+						src={val.avatarURL}
+						alt={val.name + "profile's photo"}
+					/>
+					<p>{val.name}</p>
+					<button>Login</button>
+				</div>
+			))
 		) : (
-			<div>failed to find</div>
+			<div className='center'>Loading...</div>
 		)
 
-		return <div>{users}</div>
+		return <div class='container'>{usersUI}</div>
 	}
 }
 
