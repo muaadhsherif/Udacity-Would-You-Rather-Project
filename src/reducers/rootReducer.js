@@ -7,8 +7,8 @@ const rootReducer = (state = initState, action) => {
 		case 'GET_INIT_USERS':
 			return { ...state, users: action.users }
 
-		case 'x':
-			return 'x'
+		case 'LOGIN':
+			return { ...state, currentUserId: action.currentUserId }
 
 		default:
 			return { ...state, users: action.users }

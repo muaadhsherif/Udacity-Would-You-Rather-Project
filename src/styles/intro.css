@@ -1,6 +1,5 @@
 .container {
 	display: flex;
-	background-color: #0e1929;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
@@ -9,7 +8,7 @@
 	height: 300px;
 	width: 200px;
 	margin: 30px;
-	border: solid #ccc;
+	border: double #0e1929 20px;
 	background-color: #f1f1f1;
 	font-size: 20px;
 	font-weight: bold;
@@ -31,6 +30,7 @@ img.user_avatar {
 	background-color: #0e1929;
 	color: #f1f1f1;
 	transition: 0.5s;
+	cursor: pointer;
 }
 
 .user button:hover {
