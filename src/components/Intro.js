@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { _getUsers } from '../_DATA'
-import '../styles/intro.css'
+import '../styles/Intro.css'
 import { Link } from 'react-router-dom'
 
 class Intro extends Component {
@@ -15,18 +15,18 @@ class Intro extends Component {
 						alt={user.name + "profile's photo"}
 					/>
 					<p>{user.name}</p>
-					<Link to='./user'>
+					<Link to='./home'>
 						<button
-							onClick={() => this.props.login(id)}
+							onClick={() => this.props.logIn(id)}
 							className='color3'
 						>
-							Login
+							Log In
 						</button>
 					</Link>
 				</div>
 			))
 		) : (
-			<div className='center'>Loading...</div>
+			<h1 className='color2'>Loading...</h1>
 		)
 
 		return <div className='container'>{usersUI}</div>
@@ -40,7 +40,7 @@ const mapDispatchToProps = (dispatch) => ({
 			users,
 		}),
 	),
-	login: (currentUserId) =>
+	logIn: (currentUserId) =>
 		dispatch({
 			type: 'LOGIN',
 			currentUserId,

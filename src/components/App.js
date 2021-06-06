@@ -7,6 +7,7 @@ import NotFound from './NotFound'
 
 export default class App extends Component {
 	render() {
+		//console.log(this.props.currentUser)
 		return (
 			<BrowserRouter>
 				<Switch>
@@ -18,9 +19,10 @@ export default class App extends Component {
 		)
 	}
 }
-
 /* 
 Intro
 get users from db
 
+Home
+Questions: answered, not answered
 */

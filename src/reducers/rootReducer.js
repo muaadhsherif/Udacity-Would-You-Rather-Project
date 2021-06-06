@@ -1,5 +1,6 @@
 const initState = {
 	users: [],
+	currentUser: null,
 }
 
 const rootReducer = (state = initState, action) => {

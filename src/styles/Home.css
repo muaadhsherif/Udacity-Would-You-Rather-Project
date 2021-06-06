@@ -1,0 +1,18 @@
+nav {
+	padding: 23px;
+	background: #0c1121;
+}
+nav a {
+	color: #f1f1f1;
+	font-weight: bold;
+	margin: 30px;
+	transition: 0.5s;
+}
+
+nav a:hover {
+	color: #ff6363;
+}
+
+nav a.selected {
+	color: #ff6363;
+}
