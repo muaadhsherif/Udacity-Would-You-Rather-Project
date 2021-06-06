@@ -8,10 +8,13 @@
 	height: 300px;
 	width: 200px;
 	margin: 30px;
-	border: double #0e1929 20px;
-	background-color: #f1f1f1;
+	border: double 20px;
 	font-size: 20px;
 	font-weight: bold;
+}
+
+.user p {
+	color: #0e1929;
 }
 
 img.user_avatar {
@@ -27,8 +30,6 @@ img.user_avatar {
 	padding: 10px;
 	font-size: 15px;
 	font-weight: bold;
-	background-color: #0e1929;
-	color: #f1f1f1;
 	transition: 0.5s;
 	cursor: pointer;
 }

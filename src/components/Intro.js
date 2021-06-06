@@ -8,15 +8,20 @@ class Intro extends Component {
 	render() {
 		const usersUI = this.props.users ? (
 			Object.entries(this.props.users).map(([id, user]) => (
-				<div className='user' key={id}>
+				<div className='user color2' key={id}>
 					<img
-						className='user_avatar'
+						className='user_avatar color4'
 						src={user.avatarURL}
 						alt={user.name + "profile's photo"}
 					/>
 					<p>{user.name}</p>
 					<Link to='./user'>
-						<button onClick={() => this.props.login(id)}>Login</button>
+						<button
+							onClick={() => this.props.login(id)}
+							className='color3'
+						>
+							Login
+						</button>
 					</Link>
 				</div>
 			))

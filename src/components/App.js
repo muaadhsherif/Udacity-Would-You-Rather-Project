@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import '../styles/App.css'
 import Intro from './Intro'
-import User from './User'
+import Home from './Home'
+import NotFound from './NotFound'
 
 export default class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Route exact path='/' component={Intro} />
-				<Route exact path='/user' component={User} />
+				<Switch>
+					<Route exact path='/' component={Intro} />
+					<Route exact path='/home' component={Home} />
+					<Route component={NotFound} />
+				</Switch>
 			</BrowserRouter>
 		)
 	}
