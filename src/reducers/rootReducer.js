@@ -1,18 +1,21 @@
 const initState = {
 	users: [],
-	currentUser: null,
+	x: 'waiting',
 }
 
 const rootReducer = (state = initState, action) => {
 	switch (action.type) {
 		case 'GET_INIT_USERS':
-			return { ...state, users: action.users }
+			return { ...state, users: action.users, questions: null }
 
 		case 'LOGIN':
 			return { ...state, currentUserId: action.currentUserId }
 
+		case 'GET_QUESTIONS':
+			return { ...state, questions: action.questions }
+
 		default:
-			return { ...state, users: action.users }
+			return { ...state }
 	}
 }
 

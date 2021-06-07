@@ -26,7 +26,7 @@ class Intro extends Component {
 				</div>
 			))
 		) : (
-			<h1 className='color2'>Loading...</h1>
+			<h1 className='loading'>Loading...{console.log('loading')}</h1>
 		)
 
 		return <div className='container'>{usersUI}</div>
