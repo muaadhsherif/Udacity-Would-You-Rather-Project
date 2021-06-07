@@ -3,7 +3,7 @@ nav {
 	background: #0c1121;
 }
 nav a {
-	color: #f1f1f1;
+	color: #b3ffb9;
 	font-weight: bold;
 	margin: 30px;
 	transition: 0.5s;
@@ -15,4 +15,24 @@ nav a:hover {
 
 nav a.selected {
 	color: #ff6363;
+}
+
+.q_container {
+	display: flex;
+	border: groove #ccc;
+	width: 500px;
+	padding: 20px;
+	margin: 20px auto;
+}
+
+/* Questions */
+
+.author img.user_avatar {
+	margin: 0 0 10px 0;
+}
+
+.question {
+	font-size: 20px;
+	text-align: left;
+	margin-left: 25px;
 }
