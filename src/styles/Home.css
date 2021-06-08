@@ -17,6 +17,22 @@ nav a.selected {
 	color: #ff6363;
 }
 
+/* .toggle_ques {
+} */
+
+.toggle_ques button {
+	padding: 15px;
+	font-size: 15px;
+	margin: 0 20px;
+	color: #0e1929;
+	background-color: #cff2;
+	transition: 0.5s;
+}
+
+.toggle_ques button:hover {
+	background-color: #ff6363;
+	border: groove white;
+}
 .q_container {
 	display: flex;
 	border: groove #ccc;
