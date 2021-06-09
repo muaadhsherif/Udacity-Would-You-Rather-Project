@@ -11,7 +11,11 @@ class Home extends Component {
 		answered: 'answered',
 	}
 
-	toggleQues = (e) => this.setState({ answered: e.target.value })
+	toggleQues = (e) => {
+		document.querySelector('.active').classList.remove('active')
+		e.target.classList.add('active')
+		this.setState({ answered: e.target.id })
+	}
 
 	render() {
 		if (!this.props.userId) return <Redirect to='/' />
@@ -32,9 +36,6 @@ class Home extends Component {
 					<NavLink to='/home' activeClassName='selected'>
 						Home
 					</NavLink>
-					<NavLink to='/add' activeClassName='selected'>
-						New Question
-					</NavLink>
 					<NavLink to='/leaderboard' activeClassName='selected'>
 						Leaderboard
 					</NavLink>
@@ -46,18 +47,26 @@ class Home extends Component {
 					>
 						Log Out
 					</NavLink>
+					<NavLink
+						to='/add'
+						activeClassName='selected'
+						className='newQues'
+					>
+						<span className='plus'>+</span>
+						<span>New Question</span>
+					</NavLink>
 				</nav>
 				<div className='toggle_ques'>
 					<button
-						className='color2 bold'
-						value='answered'
+						className='color2 bold active'
+						id='answered'
 						onClick={(e) => this.toggleQues(e)}
 					>
 						Answered Questions
 					</button>
 					<button
 						className='color2 bold'
-						value='unanswered'
+						id='unanswered'
 						onClick={(e) => this.toggleQues(e)}
 					>
 						Unanswered Questions

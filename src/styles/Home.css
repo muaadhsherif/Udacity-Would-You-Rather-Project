@@ -2,6 +2,7 @@ nav {
 	padding: 23px;
 	background: #0c1121;
 }
+
 nav a {
 	color: #b3ffb9;
 	font-weight: bold;
@@ -15,6 +16,27 @@ nav a:hover {
 
 nav a.selected {
 	color: #ff6363;
+	box-shadow: 3px 3px 3px;
+	text-decoration: none;
+}
+
+nav .newQues {
+	text-decoration: none;
+	position: relative;
+	float: right;
+	margin: 0;
+}
+
+nav .newQues :not(.plus) {
+	text-decoration: underline;
+}
+
+nav .newQues .plus {
+	font-size: 40px;
+	position: absolute;
+	top: -20px;
+	left: -30px;
+	text-shadow: 0 0 9px;
 }
 
 /* .toggle_ques {
@@ -26,13 +48,23 @@ nav a.selected {
 	margin: 0 20px;
 	color: #0e1929;
 	background-color: #cff2;
-	transition: 0.5s;
+	transition: 1s;
+	border: none;
 }
 
 .toggle_ques button:hover {
 	background-color: #ff6363;
+}
+
+.toggle_ques button:active {
+	font-size: 50px;
+}
+
+.toggle_ques button.active {
+	background-color: #ff6363;
 	border: groove white;
 }
+
 .q_container {
 	display: flex;
 	border: groove #ccc;
