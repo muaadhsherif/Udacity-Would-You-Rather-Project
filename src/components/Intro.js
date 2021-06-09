@@ -29,7 +29,12 @@ class Intro extends Component {
 			<h1 className='loading'>Loading...{console.log('loading')}</h1>
 		)
 
-		return <div className='container'>{usersUI}</div>
+		return (
+			<div>
+				<h1>Please Log In</h1>
+				<div className='container'>{usersUI}</div>
+			</div>
+		)
 	}
 }
 

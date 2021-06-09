@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavLink, Redirect } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { _getQuestions } from '../_DATA'
 import Answered from './Answered'
@@ -8,7 +8,7 @@ import '../styles/Home.css'
 
 class Home extends Component {
 	state = {
-		answered: 'answered',
+		answered: 'unanswered',
 	}
 
 	toggleQues = (e) => {
@@ -18,8 +18,6 @@ class Home extends Component {
 	}
 
 	render() {
-		if (!this.props.userId) return <Redirect to='/' />
-
 		const questionsUI = this.props.questions ? (
 			this.state.answered === 'answered' ? (
 				<Answered />
@@ -58,14 +56,14 @@ class Home extends Component {
 				</nav>
 				<div className='toggle_ques'>
 					<button
-						className='color2 bold active'
+						className='color2 bold'
 						id='answered'
 						onClick={(e) => this.toggleQues(e)}
 					>
 						Answered Questions
 					</button>
 					<button
-						className='color2 bold'
+						className='color2 bold active'
 						id='unanswered'
 						onClick={(e) => this.toggleQues(e)}
 					>

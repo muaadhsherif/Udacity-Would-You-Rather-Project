@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {Link} from 'react-router-dom'
 import '../styles/Unanswered.css'
 
 class Unanswered extends Component {
@@ -34,6 +35,12 @@ class Unanswered extends Component {
 							<span className='color6'>B. </span>
 							{ques.optionTwo.text}
 						</p>
+						<Link
+							onClick={() => this.props.sendQuesState('unanswered')}
+							to={'/questions/' + id}
+						>
+							Vote Now
+						</Link>
 					</div>
 				</div>
 			))
@@ -45,4 +52,12 @@ const mapStateToProps = (state) => ({
 	users: state.users,
 })
 
-export default connect(mapStateToProps)(Unanswered)
+const mapDispatchToProps = (dispatch) => ({
+	sendQuesState: (currentQuesState) =>
+		dispatch({
+			type: 'QUESSTATE',
+			currentQuesState,
+		}),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Unanswered)

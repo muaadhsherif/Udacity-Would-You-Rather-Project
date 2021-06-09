@@ -14,6 +14,9 @@ const rootReducer = (state = initState, action) => {
 		case 'GET_QUESTIONS':
 			return { ...state, questions: action.questions }
 
+		case 'QUESSTATE':
+			return { ...state, currentQuestState: action.currentQuesState }
+
 		default:
 			return { ...state }
 	}
