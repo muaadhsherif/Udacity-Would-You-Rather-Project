@@ -20,7 +20,7 @@ class App extends Component {
 				<Switch>
 					<Route exact path='/' component={Intro} />
 					<Route exact path='/home' component={Home} />
-					<Route exact path='/questions/:questId' component={Question} />
+					<Route exact path='/questions/:quesId' component={Question} />
 					<Route component={NotFound} />
 				</Switch>
 			</BrowserRouter>

@@ -8,7 +8,7 @@ class Intro extends Component {
 	render() {
 		const usersUI = this.props.users ? (
 			Object.entries(this.props.users).map(([id, user]) => (
-				<div className='user color2 center' key={id}>
+				<div className='user color2' key={id}>
 					<img
 						className='user_avatar color4'
 						src={user.avatarURL}

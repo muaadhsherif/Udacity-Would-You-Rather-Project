@@ -23,15 +23,15 @@ class Answered extends Component {
 							{this.props.users[ques.authorId].name}
 						</span>
 					</div>
-					<div className='question color3 center'>
-						Would You Rather . . .
-						<p className='bold'>
-							<span className='color6'>A. </span>
-							{ques.optionOne.text}
+					<div className='question color3'>
+						<span className='would_you_rather'>
+							Would You Rather . . .
+						</span>
+						<p className='option'>
+							A. <span>{ques.optionOne.text}.</span>
 						</p>
-						<p className='bold'>
-							<span className='color6'>B. </span>
-							{ques.optionTwo.text}
+						<p className='option'>
+							B. <span>{ques.optionTwo.text}.</span>
 						</p>
 						<Link
 							onClick={() => this.props.sendQuesState('answered')}

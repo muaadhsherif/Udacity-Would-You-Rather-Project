@@ -3,21 +3,25 @@ nav {
 	background: #0c1121;
 }
 
-nav a {
+a {
 	color: #b3ffb9;
 	font-weight: bold;
-	margin: 30px;
 	transition: 0.5s;
 }
 
-nav a:hover {
+a:not(.selected):hover {
 	color: #ff6363;
+	text-decoration: underline;
 }
 
+nav a {
+	margin: 30px;
+	font-size: 19px;
+	text-decoration: none;
+}
 nav a.selected {
 	color: #ff6363;
-	box-shadow: 3px 3px 3px;
-	text-decoration: none;
+	box-shadow: 3px 3px 3px, 0 0 3px;
 }
 
 nav .newQues {
@@ -27,7 +31,7 @@ nav .newQues {
 	margin: 0;
 }
 
-nav .newQues :not(.plus) {
+nav .newQues :not(.plus):hover {
 	text-decoration: underline;
 }
 
@@ -80,7 +84,28 @@ nav .newQues .plus {
 }
 
 .question {
-	font-size: 20px;
+	font-size: 18px;
 	text-align: left;
 	margin-left: 25px;
+}
+.question .would_you_rather {
+	font-weight: 300;
+	color: '#ccc';
+}
+.question .option {
+	font-weight: 400;
+}
+
+.question .option::first-letter {
+	color: #ea9898;
+}
+
+.question .option span {
+	display: inline-block;
+}
+.question .option span::first-letter {
+	text-transform: uppercase;
+}
+.question a {
+	font-weight: 500;
 }

@@ -5,7 +5,7 @@ import AnsweredQuestion from './AnsweredQuestion'
 class Question extends Component {
 	render() {
 		return this.props.quesState === 'answered' ? (
-			<AnsweredQuestion />
+			<AnsweredQuestion quesId={this.props.match.params.quesId} />
 		) : (
 			<div>this is an unanswered question</div>
 		)
