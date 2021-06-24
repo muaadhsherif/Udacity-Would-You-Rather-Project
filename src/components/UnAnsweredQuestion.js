@@ -1,8 +1,8 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import '../styles/Answered.css'
+import '../styles/unAnswered.css'
 
-class AnsweredQuestion extends Component {
+class UnAnsweredQuestion extends Component {
 	render() {
 		const ques = this.props.questions[this.props.quesId]
 		return (
@@ -19,20 +19,12 @@ class AnsweredQuestion extends Component {
 				</div>
 				<div className='question color3'>
 					<span className='would_you_rather'>Would You Rather . . .</span>
-					<p
-						className='option'
-						data-choosed={
-							ques.optionOne.votes.includes(this.props.userId) && 'yes'
-						}
-					>
+					<p className='option'>
+						<input type='radio' name='questchoosen' />
 						A. <span>{ques.optionOne.text}.</span>
 					</p>
-					<p
-						className='option'
-						data-choosed={
-							ques.optionTwo.votes.includes(this.props.userId) && 'yes'
-						}
-					>
+					<p className='option'>
+						<input type='radio' name='questchoosen' />
 						B. <span>{ques.optionTwo.text}.</span>
 					</p>
 				</div>
@@ -46,12 +38,4 @@ const mapStateToProps = (state) => ({
 	users: state.users,
 })
 
-export default connect(mapStateToProps)(AnsweredQuestion)
-
-/* Todo:
-Here: 1.add the pull percentage next to each option
-2. add the navbar here as well.
-3. make the current user shown above (everywhere)
-
-4.edit the unanswered q
-*/
+export default connect(mapStateToProps)(UnAnsweredQuestion)

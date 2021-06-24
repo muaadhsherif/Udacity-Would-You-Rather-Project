@@ -94,6 +94,7 @@ nav .newQues .plus {
 }
 .question .option {
 	font-weight: 400;
+	padding: 7px;
 }
 
 .question .option::first-letter {

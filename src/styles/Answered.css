@@ -1,0 +1,4 @@
+.question .option[data-choosed='yes'] {
+	border: solid #ea9898 1px;
+	font-weight: bold;
+}

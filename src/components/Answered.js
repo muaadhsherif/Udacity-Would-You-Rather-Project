@@ -27,10 +27,22 @@ class Answered extends Component {
 						<span className='would_you_rather'>
 							Would You Rather . . .
 						</span>
-						<p className='option'>
+						<p
+							className='option'
+							data-choosed={
+								ques.optionOne.votes.includes(this.props.userId) &&
+								'yes'
+							}
+						>
 							A. <span>{ques.optionOne.text}.</span>
 						</p>
-						<p className='option'>
+						<p
+							className='option'
+							data-choosed={
+								ques.optionTwo.votes.includes(this.props.userId) &&
+								'yes'
+							}
+						>
 							B. <span>{ques.optionTwo.text}.</span>
 						</p>
 						<Link
