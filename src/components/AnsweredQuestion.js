@@ -17,14 +17,14 @@ class AnsweredQuestion extends Component {
 		)
 
 		setTimeout(() => {
-			progressPerc[0].style.animationPlayState = 'paused'
-		}, opt1VotesPerc * 50)
+			if (progressPerc.length)
+				progressPerc[0].style.animationPlayState = 'paused'
+		}, opt1VotesPerc * 30)
 
 		setTimeout(() => {
-			document.getElementsByClassName(
-				'progress_percentage',
-			)[1].style.animationPlayState = 'paused'
-		}, opt2VotesPerc * 50)
+			if (progressPerc.length)
+				progressPerc[1].style.animationPlayState = 'paused'
+		}, opt2VotesPerc * 30)
 
 		return (
 			<div className='q_container'>

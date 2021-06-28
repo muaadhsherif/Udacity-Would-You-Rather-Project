@@ -12,7 +12,7 @@ export default class Percentage extends Component {
 		}
 	}
 
-	interval = setInterval(this.count, 50)
+	interval = setInterval(this.count, 30)
 	render() {
 		return <span>{this.state.i}</span>
 	}
