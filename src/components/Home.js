@@ -30,12 +30,7 @@ class Home extends Component {
 
 		return (
 			<>
-				{
-					<Nav
-						userName={this.props.userName}
-						userAvatarURL={this.props.userAvatarURL}
-					/>
-				}
+				{<Nav />}
 				<div className='toggle_ques'>
 					<button
 						className='color2 bold'

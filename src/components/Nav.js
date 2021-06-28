@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-export default class Nav extends Component {
+class Nav extends Component {
 	render() {
 		return (
 			<nav>
@@ -35,3 +36,12 @@ export default class Nav extends Component {
 		)
 	}
 }
+
+const mapStateToProps = (state) => {
+	return {
+		userName: state.users[state.currentUserId].name,
+		userAvatarURL: state.users[state.currentUserId].avatarURL,
+	}
+}
+
+export default connect(mapStateToProps)(Nav)

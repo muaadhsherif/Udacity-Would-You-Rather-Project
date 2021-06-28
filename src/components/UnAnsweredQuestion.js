@@ -1,6 +1,5 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import '../styles/unAnswered.css'
 
 class UnAnsweredQuestion extends Component {
 	render() {
