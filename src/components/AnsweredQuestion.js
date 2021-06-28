@@ -94,7 +94,7 @@ const mapStateToProps = (state) => ({
 export default connect(mapStateToProps)(AnsweredQuestion)
 
 /* Todo:
-Here: 1.add the pull percentage next to each option
+Here: 1.add the pull percentage next to each option (done)
 2. add the navbar here as well.
 3. make the current user shown above (every where)
 

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { _getQuestions } from '../_DATA'
 import Answered from './Answered'
 import UnAnswered from './Unanswered'
 import '../styles/Home.css'
+import Nav from './Nav.js'
 
 class Home extends Component {
 	state = {
@@ -30,30 +30,12 @@ class Home extends Component {
 
 		return (
 			<>
-				<nav>
-					<NavLink to='/home' activeClassName='selected'>
-						Home
-					</NavLink>
-					<NavLink to='/leaderboard' activeClassName='selected'>
-						Leaderboard
-					</NavLink>
-					<NavLink
-						exact
-						to='/'
-						activeClassName='selected'
-						onClick={() => this.logOut}
-					>
-						Log Out
-					</NavLink>
-					<NavLink
-						to='/add'
-						activeClassName='selected'
-						className='newQues'
-					>
-						<span className='plus'>+</span>
-						<span>New Question</span>
-					</NavLink>
-				</nav>
+				{
+					<Nav
+						userName={this.props.userName}
+						userAvatarURL={this.props.userAvatarURL}
+					/>
+				}
 				<div className='toggle_ques'>
 					<button
 						className='color2 bold'
@@ -85,9 +67,13 @@ const mapDispatchToProps = (dispatch) => ({
 	),
 })
 
-const mapStateToProps = (state) => ({
-	userId: state.currentUserId,
-	questions: state.questions,
-})
+const mapStateToProps = (state) => {
+	return {
+		userId: state.currentUserId,
+		questions: state.questions,
+		userName: state.users[state.currentUserId].name,
+		userAvatarURL: state.users[state.currentUserId].avatarURL,
+	}
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

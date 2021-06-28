@@ -9,20 +9,33 @@ import Question from './Question'
 
 class App extends Component {
 	render() {
-		//console.log(this.props.currentUser)
 		return (
 			<BrowserRouter>
 				<Route
 					render={() => {
-						if (!this.props.userId) return <Redirect to='/' />
+						if (!this.props.userId)
+							return (
+								<>
+									<Route exact path='/' component={Intro} />
+									<Redirect to='/' />
+								</>
+							)
+						else {
+							return (
+								<Switch>
+									<Route exact path='/' component={Intro} />
+									<Route exact path='/home' component={Home} />
+									<Route
+										exact
+										path='/questions/:quesId'
+										component={Question}
+									/>
+									<Route component={NotFound} />
+								</Switch>
+							)
+						}
 					}}
 				/>
-				<Switch>
-					<Route exact path='/' component={Intro} />
-					<Route exact path='/home' component={Home} />
-					<Route exact path='/questions/:quesId' component={Question} />
-					<Route component={NotFound} />
-				</Switch>
 			</BrowserRouter>
 		)
 	}
@@ -32,10 +45,3 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps)(App)
-/* 
-Intro
-get users from db
-
-Home
-Questions: answered, not answered
-*/

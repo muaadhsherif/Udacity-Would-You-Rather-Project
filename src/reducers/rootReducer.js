@@ -1,9 +1,8 @@
-const initState = {
+/* const initState = {
 	users: [],
-	x: 'waiting',
 }
-
-const rootReducer = (state = initState, action) => {
+ */
+const rootReducer = (state, action) => {
 	switch (action.type) {
 		case 'GET_INIT_USERS':
 			return { ...state, users: action.users, questions: null }
