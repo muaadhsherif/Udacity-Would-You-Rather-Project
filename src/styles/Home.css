@@ -75,6 +75,7 @@ nav .newQues .plus {
 	width: 500px;
 	padding: 20px;
 	margin: 20px auto;
+	align-items: center;
 }
 
 /* Questions */
@@ -95,18 +96,22 @@ nav .newQues .plus {
 .question .option {
 	font-weight: 400;
 	padding: 7px;
+	margin-top: 13px;
 }
 
 .question .option::first-letter {
 	color: #ea9898;
+	padding: 2px;
 }
 
 .question .option span {
 	display: inline-block;
 }
-.question .option span::first-letter {
+.question .option .opt_text::first-letter {
 	text-transform: uppercase;
 }
 .question a {
 	font-weight: 500;
+	margin-top: 13px;
+	display: inline-block;
 }

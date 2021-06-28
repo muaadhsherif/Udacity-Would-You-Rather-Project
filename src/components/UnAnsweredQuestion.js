@@ -19,14 +19,14 @@ class UnAnsweredQuestion extends Component {
 				</div>
 				<div className='question color3'>
 					<span className='would_you_rather'>Would You Rather . . .</span>
-					<p className='option'>
+					<div className='option'>
 						<input type='radio' name='questchoosen' />
-						A. <span>{ques.optionOne.text}.</span>
-					</p>
-					<p className='option'>
+						A. <span className='opt_text'>{ques.optionOne.text}.</span>
+					</div>
+					<div className='option'>
 						<input type='radio' name='questchoosen' />
-						B. <span>{ques.optionTwo.text}.</span>
-					</p>
+						B. <span className='opt_text'>{ques.optionTwo.text}.</span>
+					</div>
 				</div>
 			</div>
 		)

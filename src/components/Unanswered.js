@@ -29,12 +29,12 @@ class Unanswered extends Component {
 						<span className='would_you_rather'>
 							Would You Rather . . .
 						</span>
-						<p className='option'>
-							A. <span>{ques.optionOne.text}.</span>
-						</p>
-						<p className='option'>
-							B. <span>{ques.optionTwo.text}.</span>
-						</p>
+						<div className='option'>
+							A. <span className='opt_text'>{ques.optionOne.text}.</span>
+						</div>
+						<div className='option'>
+							B. <span className='opt_text'>{ques.optionTwo.text}.</span>
+						</div>
 						<Link
 							onClick={() => this.props.sendQuesState('unanswered')}
 							to={'/questions/' + id}

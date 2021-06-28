@@ -1,10 +1,31 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import '../styles/Answered.css'
+import '../styles/AnsweredQuestion.css'
+import Percentage from './Percentage'
 
 class AnsweredQuestion extends Component {
 	render() {
 		const ques = this.props.questions[this.props.quesId]
+		const opt1VotesNum = ques.optionOne.votes.length
+		const opt2VotesNum = ques.optionTwo.votes.length
+		const totalVotes = opt1VotesNum + opt2VotesNum
+		const opt1VotesPerc = (opt1VotesNum / totalVotes) * 100
+		const opt2VotesPerc = (opt2VotesNum / totalVotes) * 100
+		const progressPerc = document.getElementsByClassName(
+			'progress_percentage',
+		)
+
+		setTimeout(() => {
+			progressPerc[0].style.animationPlayState = 'paused'
+		}, opt1VotesPerc * 50)
+
+		setTimeout(() => {
+			document.getElementsByClassName(
+				'progress_percentage',
+			)[1].style.animationPlayState = 'paused'
+		}, opt2VotesPerc * 50)
+
 		return (
 			<div className='q_container'>
 				<div className='author'>
@@ -19,22 +40,46 @@ class AnsweredQuestion extends Component {
 				</div>
 				<div className='question color3'>
 					<span className='would_you_rather'>Would You Rather . . .</span>
-					<p
+					<div
 						className='option'
 						data-choosed={
 							ques.optionOne.votes.includes(this.props.userId) && 'yes'
 						}
 					>
-						A. <span>{ques.optionOne.text}.</span>
-					</p>
-					<p
+						<div>
+							A. <span className='opt_text'>{ques.optionOne.text}.</span>
+						</div>
+						<div className='progress_info'>
+							<span className='progress_percentage'>
+								<span className='percentage_number'>
+									<Percentage max={opt1VotesPerc} />%
+								</span>
+							</span>
+							<div className='number'>
+								<span>{opt1VotesNum}</span>
+								<span>___</span> <span>{totalVotes + ' '}</span>
+							</div>
+						</div>
+					</div>
+					<div
 						className='option'
 						data-choosed={
 							ques.optionTwo.votes.includes(this.props.userId) && 'yes'
 						}
 					>
-						B. <span>{ques.optionTwo.text}.</span>
-					</p>
+						B. <span className='opt_text'>{ques.optionTwo.text}.</span>
+						<div className='progress_info'>
+							<span className='progress_percentage'>
+								<span className='percentage_number'>
+									<Percentage max={opt2VotesPerc} />%
+								</span>
+							</span>
+							<div className='number'>
+								<span>{opt2VotesNum}</span>
+								<span>___</span> <span>{totalVotes + ' '}</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		)
@@ -51,7 +96,7 @@ export default connect(mapStateToProps)(AnsweredQuestion)
 /* Todo:
 Here: 1.add the pull percentage next to each option
 2. add the navbar here as well.
-3. make the current user shown above (everywhere)
+3. make the current user shown above (every where)
 
 4.edit the unanswered q
 */
