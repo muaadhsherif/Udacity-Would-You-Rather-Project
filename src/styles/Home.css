@@ -70,8 +70,9 @@ nav .newQues .plus {
 	margin: 0 20px;
 	color: #0e1929;
 	background-color: #cff2;
-	transition: 1s;
+	transition: 0.3xs;
 	border: none;
+	font-size: 16px;
 }
 
 .toggle_ques button:hover {
@@ -79,7 +80,7 @@ nav .newQues .plus {
 }
 
 .toggle_ques button:active {
-	font-size: 50px;
+	font-size: 20px;
 }
 
 .toggle_ques button.active {

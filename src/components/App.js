@@ -6,6 +6,8 @@ import Intro from './Intro'
 import Home from './Home'
 import NotFound from './NotFound'
 import Question from './Question'
+import Leaderboard from './Leaderboard'
+import AddQuestion from './AddQuestion'
 
 class App extends Component {
 	render() {
@@ -29,6 +31,16 @@ class App extends Component {
 										exact
 										path='/questions/:quesId'
 										component={Question}
+									/>
+									<Route
+										exact
+										path='/add_question'
+										component={AddQuestion}
+									/>
+									<Route
+										exact
+										path='/leaderboard'
+										component={Leaderboard}
 									/>
 									<Route component={NotFound} />
 								</Switch>

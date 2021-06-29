@@ -28,7 +28,11 @@ class Nav extends Component {
 				>
 					Log Out
 				</NavLink>
-				<NavLink to='/add' activeClassName='selected' className='newQues'>
+				<NavLink
+					to='/add_question'
+					activeClassName='selected'
+					className='newQues'
+				>
 					<span className='plus'>+</span>
 					<span>New Question</span>
 				</NavLink>
