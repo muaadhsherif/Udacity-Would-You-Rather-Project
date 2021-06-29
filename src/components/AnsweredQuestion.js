@@ -18,12 +18,12 @@ class AnsweredQuestion extends Component {
 		setTimeout(() => {
 			if (progressPerc.length)
 				progressPerc[0].style.animationPlayState = 'paused'
-		}, opt1VotesPerc * 30)
+		}, opt1VotesPerc * 35)
 
 		setTimeout(() => {
 			if (progressPerc.length)
 				progressPerc[1].style.animationPlayState = 'paused'
-		}, opt2VotesPerc * 30)
+		}, opt2VotesPerc * 35)
 
 		return (
 			<div className='q_container'>

@@ -8,13 +8,14 @@ import Nav from './Nav.js'
 
 class Home extends Component {
 	state = {
-		answered: 'unanswered',
+		answered: localStorage.answered || 'unanswered',
 	}
 
 	toggleQues = (e) => {
 		document.querySelector('.active').classList.remove('active')
 		e.target.classList.add('active')
 		this.setState({ answered: e.target.id })
+		localStorage.answered = e.target.id
 	}
 
 	render() {
@@ -33,14 +34,22 @@ class Home extends Component {
 				{<Nav />}
 				<div className='toggle_ques'>
 					<button
-						className='color2 bold'
+						className={
+							this.state.answered === 'answered'
+								? 'active color2 bold'
+								: 'color2 bold'
+						}
 						id='answered'
 						onClick={(e) => this.toggleQues(e)}
 					>
 						Answered Questions
 					</button>
 					<button
-						className='color2 bold active'
+						className={
+							this.state.answered === 'unanswered'
+								? 'active color2 bold'
+								: 'color2 bold'
+						}
 						id='unanswered'
 						onClick={(e) => this.toggleQues(e)}
 					>

@@ -14,7 +14,7 @@
 	border: solid 10px transparent;
 	width: 100px;
 	height: 100px;
-	animation: fill-border both linear 3s;
+	animation: fill-border both linear 3s 0.25s;
 	background-position: 0, 50% 0, 0 50%, 50% 100%, 100% 50%;
 	background-clip: padding-box, border-box, border-box, border-box, border-box;
 	background-origin: border-box;

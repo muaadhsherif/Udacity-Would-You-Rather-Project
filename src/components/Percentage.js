@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class Percentage extends Component {
 	state = {
-		i: 0,
+		i: -5,
 	}
 	count = () => {
 		if (this.state.i === this.props.max) {
@@ -14,6 +14,6 @@ export default class Percentage extends Component {
 
 	interval = setInterval(this.count, 30)
 	render() {
-		return <span>{this.state.i}</span>
+		return <span>{this.state.i > -1 && this.state.i}</span>
 	}
 }
