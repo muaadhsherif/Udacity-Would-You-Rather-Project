@@ -27,14 +27,6 @@ img.user_avatar {
 	margin: 30px auto;
 }
 
-.user button {
-	padding: 10px;
-	font-size: 15px;
-	font-weight: bold;
-	transition: 0.5s;
-	cursor: pointer;
-}
-
 .user button:hover {
 	background-color: #f1f1f1;
 	color: #0e1929;

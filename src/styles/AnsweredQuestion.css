@@ -2,6 +2,12 @@
 	position: relative;
 	min-width: 270px;
 }
+.question .option[data-choosed='yes'] {
+	box-shadow: 2px 2px 3px #ea9898, -1px -1px 3px #ea9898;
+	background-color: #ea989833;
+	font-weight: bold;
+}
+
 .question .option .progress_percentage {
 	margin: 10px;
 	border-radius: 50%;
@@ -46,10 +52,6 @@
 		linear-gradient(black, rgb(128, 0, 0) 50%, transparent 50%);
 	box-shadow: rgb(255 199 199) 3px 0px 3px, rgb(255 199 199) -3px 0px 3px,
 		rgb(255 199 199) 0px 3px 3px, rgb(255 199 199) 0px -3px 3px;
-}
-
-.question .option:not(.option[data-choosed='yes']) {
-	box-shadow: 2px 2px 3px #9898ea, -1px -1px 3px #9898ea;
 }
 
 .question

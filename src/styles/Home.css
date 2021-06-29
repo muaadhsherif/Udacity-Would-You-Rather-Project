@@ -10,7 +10,9 @@ nav .current_user {
 }
 
 nav .user_avatar {
-	margin: 0;
+	margin: 0 0 0 20px;
+	width: 60px;
+	height: 60px;
 }
 
 nav .current_user span {
@@ -113,6 +115,7 @@ nav .newQues .plus {
 	font-weight: 400;
 	padding: 7px;
 	margin-top: 13px;
+	box-shadow: 2px 2px 3px #9898ea, -1px -1px 3px #9898ea;
 }
 
 .question .option::first-letter {
