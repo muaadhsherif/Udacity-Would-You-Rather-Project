@@ -91,17 +91,3 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps)(AnsweredQuestion)
-
-/* Todo:
-Here: 1.add the pull percentage next to each option [Done]
-2. add the navbar here as well. [Done]
-3. make the current user shown above (every where) [Done]
-
-4.edit the unanswered q
-5. save the answer user chooses.
-6.Refresh page so it automatically will be shown as answered
-
-*Add New Question
-
-*LeaderBoard
-*/
