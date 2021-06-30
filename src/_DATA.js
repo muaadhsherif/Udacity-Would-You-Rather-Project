@@ -64,19 +64,6 @@ let questions = {
 			text: 'become a supervillain',
 		},
 	},
-	am8ehyc8byjqgar0jgpub9: {
-		id: 'am8ehyc8byjqgar0jgpub9',
-		authorId: 'sarahedo',
-		timestamp: 1488579767190,
-		optionOne: {
-			votes: [],
-			text: 'be telekinetic',
-		},
-		optionTwo: {
-			votes: ['sarahedo'],
-			text: 'be telepathic',
-		},
-	},
 	loxhs1bqm25b708cmbf3g: {
 		id: 'loxhs1bqm25b708cmbf3g',
 		authorId: 'tylermcginnis',
@@ -88,6 +75,20 @@ let questions = {
 		optionTwo: {
 			votes: ['sarahedo'],
 			text: 'be a back-end developer',
+		},
+	},
+
+	am8ehyc8byjqgar0jgpub9: {
+		id: 'am8ehyc8byjqgar0jgpub9',
+		authorId: 'sarahedo',
+		timestamp: 1488579767190,
+		optionOne: {
+			votes: [],
+			text: 'be telekinetic',
+		},
+		optionTwo: {
+			votes: ['sarahedo'],
+			text: 'be telepathic',
 		},
 	},
 	vthrdm985a262al8qx3do: {
@@ -160,8 +161,8 @@ export function _saveQuestion(question) {
 
 		setTimeout(() => {
 			questions = {
-				...questions,
 				[formattedQuestion.id]: formattedQuestion,
+				...questions,
 			}
 
 			users = {
