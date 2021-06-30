@@ -2,12 +2,16 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import '../styles/UnansweredQuestion.css'
 import { _saveQuestionAnswer } from '../_DATA'
+import { Redirect } from 'react-router-dom'
 
 class UnAnsweredQuestion extends Component {
+	state = { voted: false }
 	render() {
 		let choosenOptionId = 'optionOne'
 		const ques = this.props.questions[this.props.quesId]
-		return (
+		return this.state.voted === true ? (
+			<Redirect to='/home' />
+		) : (
 			<div className='unAnsweredQ'>
 				<div className='q_container'>
 					<div className='author'>
@@ -60,7 +64,10 @@ class UnAnsweredQuestion extends Component {
 								this.props.quesId,
 								choosenOptionId,
 							)
-							window.history.go(-1)
+
+							this.setState(() => ({
+								voted: true,
+							}))
 						}}
 					>
 						Submit

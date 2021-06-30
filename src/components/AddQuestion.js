@@ -3,10 +3,14 @@ import { connect } from 'react-redux'
 import Nav from './Nav.js'
 import '../styles/AddQuestion.css'
 import { _saveQuestion } from '../_DATA.js'
+import { Redirect } from 'react-router-dom'
 
 class AddQuestion extends Component {
+	state = { submitted: false }
 	render() {
-		return (
+		return this.state.submitted === true ? (
+			<Redirect to='/home' />
+		) : (
 			<>
 				<Nav />
 				<div className='add_question'>
@@ -28,13 +32,14 @@ class AddQuestion extends Component {
 
 					<button
 						className='sumbit_btn'
-						onClick={() =>
+						onClick={() => {
 							_saveQuestion({
 								optionOneText: document.getElementById('opt1').value,
 								optionTwoText: document.getElementById('opt2').value,
 								author: this.props.authorId,
 							})
-						}
+							this.setState(() => ({ submitted: true }))
+						}}
 					>
 						Submit
 					</button>
