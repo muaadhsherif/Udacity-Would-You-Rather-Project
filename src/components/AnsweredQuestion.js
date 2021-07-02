@@ -9,8 +9,12 @@ class AnsweredQuestion extends Component {
 		const opt1VotesNum = ques.optionOne.votes.length
 		const opt2VotesNum = ques.optionTwo.votes.length
 		const totalVotes = opt1VotesNum + opt2VotesNum
-		const opt1VotesPerc = (opt1VotesNum / totalVotes) * 100
-		const opt2VotesPerc = (opt2VotesNum / totalVotes) * 100
+		const opt1VotesPerc = Number(
+			((opt1VotesNum / totalVotes) * 100).toFixed(),
+		)
+		const opt2VotesPerc = Number(
+			((opt2VotesNum / totalVotes) * 100).toFixed(),
+		)
 		const progressPerc = document.getElementsByClassName(
 			'progress_percentage',
 		)
