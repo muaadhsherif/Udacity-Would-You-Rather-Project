@@ -35,9 +35,8 @@ class Home extends Component {
 				<div className='toggle_ques'>
 					<button
 						className={
-							this.state.answered === 'answered'
-								? 'active color2 bold'
-								: 'color2 bold'
+							(this.state.answered === 'answered' ? 'active ' : '') +
+							'color2 bold'
 						}
 						id='answered'
 						onClick={(e) => this.toggleQues(e)}
@@ -46,9 +45,8 @@ class Home extends Component {
 					</button>
 					<button
 						className={
-							this.state.answered === 'unanswered'
-								? 'active color2 bold'
-								: 'color2 bold'
+							(this.state.answered === 'unanswered' ? 'active ' : '') +
+							'color2 bold'
 						}
 						id='unanswered'
 						onClick={(e) => this.toggleQues(e)}
