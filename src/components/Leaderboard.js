@@ -25,6 +25,7 @@ const Leaderboard = (props) => {
 					<tr>
 						<th>Rank</th>
 						<th>Name</th>
+						<th>Photo</th>
 						<th>Questions</th>
 						<th>Answers</th>
 						<th>Score</th>
@@ -37,8 +38,13 @@ const Leaderboard = (props) => {
 							className={user.id === currentUserId ? 'current_user' : ''}
 						>
 							<th>{ind + 1}</th>
+							<td>{user.name}</td>
 							<td>
-								<span>{user.name}</span>
+								<img
+									src={user.avatarURL}
+									alt='user_photo'
+									className='table_user_avatar'
+								/>
 							</td>
 							<td>{user.quesNum}</td>
 							<td>{user.answersNum}</td>

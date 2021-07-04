@@ -8,7 +8,8 @@ class UnAnsweredQuestion extends Component {
 	state = { voted: false }
 	render() {
 		let chosenOptionId = 'optionOne'
-		const ques = this.props.questions[this.props.quesId]
+		const { quesId, userId, questions, users } = this.props
+		const ques = questions[quesId]
 		return this.state.voted === true ? (
 			<Redirect to='/home' />
 		) : (
@@ -17,12 +18,10 @@ class UnAnsweredQuestion extends Component {
 					<div className='author'>
 						<img
 							className='user_avatar color4'
-							src={this.props.users[ques.authorId].avatarURL}
+							src={users[ques.authorId].avatarURL}
 							alt={ques.author + "profile's photo"}
 						/>
-						<span className='color5'>
-							{this.props.users[ques.authorId].name}
-						</span>
+						<span className='color5'>{users[ques.authorId].name}</span>
 					</div>
 					<div className='question color3'>
 						<span className='would_you_rather'>
@@ -59,11 +58,7 @@ class UnAnsweredQuestion extends Component {
 					<button
 						className='submit_btn'
 						onClick={() => {
-							_saveQuestionAnswer(
-								this.props.userId,
-								this.props.quesId,
-								chosenOptionId,
-							)
+							_saveQuestionAnswer(userId, quesId, chosenOptionId)
 
 							this.setState(() => ({
 								voted: true,

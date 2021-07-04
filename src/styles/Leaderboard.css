@@ -34,3 +34,9 @@ table .current_user {
 table .current_user td {
 	font-weight: bold;
 }
+
+.table_user_avatar {
+	width: 60px;
+	height: 60px;
+	border-radius: 30%;
+}
