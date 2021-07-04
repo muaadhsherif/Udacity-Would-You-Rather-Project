@@ -4,6 +4,7 @@ import Answered from './Answered'
 import UnAnswered from './Unanswered'
 import '../styles/Home.css'
 import Nav from './Nav.js'
+import { _getQuestions } from '../_DATA'
 
 class Home extends Component {
 	state = {
@@ -68,4 +69,13 @@ const mapStateToProps = (state) => {
 	}
 }
 
-export default connect(mapStateToProps)(Home)
+const mapDispatchToProps = (dispatch) => ({
+	getQuestions: _getQuestions().then((questions) =>
+		dispatch({
+			type: 'GET_QUESTIONS',
+			questions,
+		}),
+	),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

@@ -1,8 +1,7 @@
 import { connect } from 'react-redux'
-import { _getUsers } from '../_DATA'
+import { _getUsers, _getQuestions } from '../_DATA'
 import '../styles/Intro.css'
 import { Link } from 'react-router-dom'
-import { _getQuestions } from '../_DATA'
 
 const Intro = (props) => {
 	const usersUI = props.users ? (

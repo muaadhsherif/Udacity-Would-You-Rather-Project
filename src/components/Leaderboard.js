@@ -1,6 +1,7 @@
 import Nav from './Nav.js'
 import '../styles/Leaderboard.css'
 import { connect } from 'react-redux'
+import { _getUsers } from '../_DATA'
 
 const Leaderboard = (props) => {
 	const { currentUserId, users } = props
@@ -16,7 +17,6 @@ const Leaderboard = (props) => {
 		(a, b) => b.quesNum + b.answersNum - (a.quesNum + a.answersNum),
 	)
 
-	console.log(sortedUsers)
 	return (
 		<>
 			<Nav />
@@ -56,4 +56,13 @@ const mapStateToProps = (state) => ({
 	users: state.users,
 })
 
-export default connect(mapStateToProps)(Leaderboard)
+const mapDispatchToProps = (dispatch) => ({
+	getUsers: _getUsers().then((users) =>
+		dispatch({
+			type: 'GET_INIT_USERS',
+			users,
+		}),
+	),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Leaderboard)
