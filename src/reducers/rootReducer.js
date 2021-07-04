@@ -13,7 +13,7 @@ const rootReducer = (state, action) => {
 		case 'GET_QUESTIONS':
 			return { ...state, questions: action.questions }
 
-		case 'QUESSTATE':
+		case 'QUES_STATE':
 			return { ...state, currentQuestState: action.currentQuesState }
 
 		default:

@@ -7,7 +7,7 @@ import { Redirect } from 'react-router-dom'
 class UnAnsweredQuestion extends Component {
 	state = { voted: false }
 	render() {
-		let choosenOptionId = 'optionOne'
+		let chosenOptionId = 'optionOne'
 		const ques = this.props.questions[this.props.quesId]
 		return this.state.voted === true ? (
 			<Redirect to='/home' />
@@ -32,9 +32,9 @@ class UnAnsweredQuestion extends Component {
 							<input
 								defaultChecked
 								type='radio'
-								name='questchoosen'
+								name='quest_chosen'
 								onClick={(e) =>
-									(choosenOptionId =
+									(chosenOptionId =
 										e.target.attributes['data-opt-id'].value)
 								}
 								data-opt-id='optionOne'
@@ -44,9 +44,9 @@ class UnAnsweredQuestion extends Component {
 						<div className='option'>
 							<input
 								type='radio'
-								name='questchoosen'
+								name='quest_chosen'
 								onClick={(e) =>
-									(choosenOptionId =
+									(chosenOptionId =
 										e.target.attributes['data-opt-id'].value)
 								}
 								data-opt-id='optionTwo'
@@ -57,12 +57,12 @@ class UnAnsweredQuestion extends Component {
 				</div>
 				{
 					<button
-						className='sumbit_btn'
+						className='submit_btn'
 						onClick={() => {
 							_saveQuestionAnswer(
 								this.props.userId,
 								this.props.quesId,
-								choosenOptionId,
+								chosenOptionId,
 							)
 
 							this.setState(() => ({

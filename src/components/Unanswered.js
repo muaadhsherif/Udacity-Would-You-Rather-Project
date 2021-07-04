@@ -54,7 +54,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
 	sendQuesState: (currentQuesState) =>
 		dispatch({
-			type: 'QUESSTATE',
+			type: 'QUES_STATE',
 			currentQuesState,
 		}),
 })
