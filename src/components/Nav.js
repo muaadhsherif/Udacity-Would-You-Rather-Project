@@ -24,7 +24,9 @@ class Nav extends Component {
 					exact
 					to='/'
 					activeClassName='selected'
-					onClick={() => this.logOut}
+					onClick={() => {
+						localStorage.lastLocation = ''
+					}}
 				>
 					Log Out
 				</NavLink>

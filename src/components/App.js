@@ -11,18 +11,22 @@ import AddQuestion from './AddQuestion'
 
 class App extends Component {
 	render() {
+		window.location.pathname === '/'
+			? (localStorage.lastLocation = '')
+			: (localStorage.lastLocation = window.location.pathname)
+
 		return (
 			<BrowserRouter>
 				<Route
 					render={() => {
-						if (!this.props.userId)
+						if (!this.props.userId) {
 							return (
 								<>
 									<Route exact path='/' component={Intro} />
 									<Redirect to='/' />
 								</>
 							)
-						else {
+						} else {
 							return (
 								<Switch>
 									<Route exact path='/' component={Intro} />

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { _getUsers } from '../_DATA'
 import '../styles/Intro.css'
 import { Link } from 'react-router-dom'
+import { _getQuestions } from '../_DATA'
 
 class Intro extends Component {
 	render() {
@@ -15,7 +16,7 @@ class Intro extends Component {
 						alt={user.name + "profile's photo"}
 					/>
 					<p>{user.name}</p>
-					<Link to='./home'>
+					<Link to={localStorage.lastLocation || './home'}>
 						<button
 							onClick={() => this.props.logIn(id)}
 							className='color3'
@@ -45,11 +46,19 @@ const mapDispatchToProps = (dispatch) => ({
 			users,
 		}),
 	),
+
 	logIn: (currentUserId) =>
 		dispatch({
 			type: 'LOGIN',
 			currentUserId,
 		}),
+
+	getQuestions: _getQuestions().then((questions) =>
+		dispatch({
+			type: 'GET_QUESTIONS',
+			questions,
+		}),
+	),
 })
 
 const mapStateToProps = (state) => ({

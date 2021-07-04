@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { _getQuestions } from '../_DATA'
 import Answered from './Answered'
 import UnAnswered from './Unanswered'
 import '../styles/Home.css'
@@ -60,15 +59,6 @@ class Home extends Component {
 	}
 }
 
-const mapDispatchToProps = (dispatch) => ({
-	getQuestions: _getQuestions().then((questions) =>
-		dispatch({
-			type: 'GET_QUESTIONS',
-			questions,
-		}),
-	),
-})
-
 const mapStateToProps = (state) => {
 	return {
 		userId: state.currentUserId,
@@ -78,4 +68,4 @@ const mapStateToProps = (state) => {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps)(Home)

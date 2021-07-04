@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default class NotFound extends Component {
 	render() {
+		localStorage.lastLocation = ''
 		return (
 			<div>
 				<h2>404 - Page Not Found!</h2>

@@ -32,7 +32,7 @@ class AddQuestion extends Component {
 					</div>
 
 					<button
-						className='sumbit_btn'
+						className='submit_btn'
 						onClick={() => {
 							_saveQuestion({
 								optionOneText: document.getElementById('opt1').value,
