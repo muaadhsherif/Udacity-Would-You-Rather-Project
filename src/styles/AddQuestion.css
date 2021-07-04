@@ -18,7 +18,7 @@
 	text-shadow: 1px 1px 10px green;
 }
 
-.add_question .sumbit_btn:hover {
+.add_question .submit_btn:hover {
 	background-color: #ff6363;
 	text-shadow: 1px 1px 10px white;
 }

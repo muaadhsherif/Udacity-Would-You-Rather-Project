@@ -10,14 +10,14 @@
 	padding: 0;
 }
 
-.unAnsweredQ .sumbit_btn {
+.unAnsweredQ .submit_btn {
 	background-color: #b3ffb9;
 	color: #0e1929;
 	font-size: 18px;
 	text-shadow: 1px 1px 10px green;
 }
 
-.unAnsweredQ .sumbit_btn:hover {
+.unAnsweredQ .submit_btn:hover {
 	background-color: #ff6363;
 	text-shadow: 1px 1px 10px white;
 }

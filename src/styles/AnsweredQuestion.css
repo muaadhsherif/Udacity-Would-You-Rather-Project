@@ -2,7 +2,7 @@
 	position: relative;
 	min-width: 270px;
 }
-.question .option[data-choosed='yes'] {
+.question .option[data-chosen='yes'] {
 	box-shadow: 2px 2px 3px #ea9898, -1px -1px 3px #ea9898;
 	background-color: #ea989833;
 	font-weight: bold;
@@ -24,7 +24,7 @@
 	justify-content: center;
 }
 
-.question .option[data-choosed='yes'] .progress_percentage {
+.question .option[data-chosen='yes'] .progress_percentage {
 	background-image: radial-gradient(
 			white,
 			rgb(255, 199, 199) 60%,
@@ -55,7 +55,7 @@
 }
 
 .question
-	.progress_percentage:not(.option[data-choosed='yes'] .progress_percentage) {
+	.progress_percentage:not(.option[data-chosen='yes'] .progress_percentage) {
 	background-image: radial-gradient(
 			white,
 			rgb(199, 199, 255) 60%,
@@ -111,12 +111,12 @@
 	padding: 13px;
 }
 
-.option[data-choosed='yes'] .progress_percentage {
+.option[data-chosen='yes'] .progress_percentage {
 	color: rgb(51, 0, 0);
 	text-shadow: rgb(204 0 0) 1px 1px 3px;
 }
 
-.option .percentage_number:not(.option[data-choosed='yes'] .percentage_number) {
+.option .percentage_number:not(.option[data-chosen='yes'] .percentage_number) {
 	color: rgb(0, 0, 51);
 	text-shadow: rgb(0 0 204) 1px 1px 3px;
 	transform: rotateY(180deg);
@@ -128,10 +128,10 @@
 	opacity: 0.5;
 }
 
-.option[data-choosed='yes'] .number {
+.option[data-chosen='yes'] .number {
 	text-shadow: 0.3px 0.3px 3px #ea9898;
 }
-.option .number:not(.option[data-choosed='yes'] .number) {
+.option .number:not(.option[data-chosen='yes'] .number) {
 	text-shadow: 0.3px 0.3px 3px #9898ea;
 }
 
