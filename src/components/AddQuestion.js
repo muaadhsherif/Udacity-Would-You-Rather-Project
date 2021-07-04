@@ -7,6 +7,7 @@ import { Redirect } from 'react-router-dom'
 
 class AddQuestion extends Component {
 	state = { submitted: false }
+	
 	render() {
 		return this.state.submitted === true ? (
 			<Redirect to='/home' />
