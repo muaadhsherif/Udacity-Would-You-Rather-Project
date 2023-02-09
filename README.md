@@ -9,8 +9,9 @@ A simple app which in users can ask and answer (would you rather) questions.
 1. Download the app repository.
 2. Unzip.
 3. Open terminal in the app root directory.
-4. Write `npm start`.
-5. After finished, write `npm install`.
+4. Write `npm install`.
+5. After finished, If it is needed, write `npm fix audit --force`.
+6. After finished, Write `npm start`.
    wait, it will automatically open the app in the browser: http://localhost:3000/.
 
 ## Details
