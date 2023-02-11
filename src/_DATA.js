@@ -16,7 +16,7 @@ let users = {
 		id: 'tylermcginnis',
 		name: 'Tyler McGinnis',
 		avatarURL:
-			'https://pbs.twimg.com/profile_images/1274852397693595649/tchdGtaK_400x400.jpg',
+			'https://cdn-icons-png.flaticon.com/512/149/149071.png',
 		answers: {
 			vthrdm985a262al8qx3do: 'optionOne',
 			xj352vofupe1dqz9emx13r: 'optionTwo',
