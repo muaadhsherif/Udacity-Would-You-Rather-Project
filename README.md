@@ -1,5 +1,7 @@
 # Udacity Would You Rather Project
 
+https://user-images.githubusercontent.com/31386135/218334468-9e9b2110-3036-4aa2-807c-4b15f7dc2583.mp4
+
 ## About
 
 A simple app which in users can ask and answer (would you rather) questions.
